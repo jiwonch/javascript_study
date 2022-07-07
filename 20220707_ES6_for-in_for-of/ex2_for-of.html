@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of문</title>
+</head>
+<body>
+    <h1>for of 객체의 값을 반복</h1>
+
+    <!-- 반복 가능한 객체(iterable)를 순회할 수 있도록 해줌
+    Array, Map, Set, arguments 등이 해당됨(Object는 해당X)
+    
+    for...of 반복문이 ES6에 추가된 새로운 컬렉션 전용 반복 구문이다.
+    for...of구문을 사용하기 위해선 컬렉션 객체가 [Symbol.iterator] 속성을
+    가지고 있어야만 한다. (직접 명시 가능) -->
+
+    <script>
+        var cars = ['BMW', 'Volvo', 'Mini'];
+        var x;
+
+        for(x of cars){
+            document.write(x + '<br>');
+        }
+    </script>
+</body>
+</html>
