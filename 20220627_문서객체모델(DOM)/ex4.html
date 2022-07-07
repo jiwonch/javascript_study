@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="chk1" id="c1">자바스크립트
+    <h3>check</h3>
+    <button>click</button>
+
+    <script>
+        document.getElementsByTagName('button')[0].onclick=function(){
+            if(document.getElementsByTagName('input')[0].checked==true){
+                document.getElementsByTagName('h3')[0].innerHTML="true";
+            }else{
+                document.getElementsByTagName('h3')[0].innerHTML="false";
+            }
+        }
+    </script>
+</body>
+</html>

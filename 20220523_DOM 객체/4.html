@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+
+    <style>
+        *{
+            font-family: "맑은 고딕";
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            document.getElementById('a').onclick = function(){
+                document.getElementById('c').style.color = "green";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="a">click</button>
+    <h1 id="c">강원도</h1>
+</body>
+</html>

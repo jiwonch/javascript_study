@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+
+    <style>
+        *{
+            font-family: "맑은 고딕";
+        }
+
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+            margin: 100px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="a">click</button>
+
+    <div id="box">
+        <h3>popup</h3>
+        <button id="cbtn">close</button>
+    </div>
+
+    <script>
+        document.getElementById('a').onclick = function(){
+            document.getElementById("box").style.display =" block";
+        }
+
+        document.getElementById("cbtn").onclick = function(){
+            document.getElementById("box").style.display = "none";
+        }
+    </script>
+</body>
+</html>

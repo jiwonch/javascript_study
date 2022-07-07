@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Musical(seat, person, ticketvalue){
+            this.seat = seat;
+            this.person = Number(person);
+            this.ticketvalue = Number(ticketvalue);
+            this.musicalticket = function(){
+                document.write("뮤지컬 삼총사의" + this.seat + "석 티켓" + this.person + "장의 가격은" + this.person*this.ticketvalue + "원 입니다.");
+            }
+        }
+
+        var todaymusical = new Musical("VIP", 5, 130000);
+        todaymusical.musicalticket();
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var scores = [["A", [11, 55, 60]], ["B", [22, 33, 44]]];
+        var max_list = [0, 0, 0];
+
+        for (var i = 0; i < scores.length; i++) {
+            for (var j = 0; j < scores[i][1].length; j++) {
+                if (max_list[j] < scores[i][1][j]) {
+                    max_list[j] = scores[i][1][j];
+                }
+            }
+        }
+        document.write("최대값=" + max_list);
+
+        var min_list = [100, 100, 100];
+
+        for (var i = 0; i < scores.length; i++) {
+            for (var j = 0; j < scores[i][1].length; j++) {
+                if (min_list[j] > scores[i][1][j]) {
+                    min_list[j] = scores[i][1][j];
+                }
+            }
+        }
+        document.write("최소값=" + min_list);
+
+        var avg_list = [];
+
+        for (var i = 0; i < scores[0][1].length; i++) {
+            var sum = 0;
+            for (var j = 0; j < scores.length; j++) {
+                sum += scores[j][1][i];
+            }
+            avg_list[i] = sum / scores.length;
+        }
+        document.write("평균값=" + avg_list);
+    </script>
+</body>
+
+</html>

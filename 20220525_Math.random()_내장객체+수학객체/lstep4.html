@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dan = parseInt(prompt("2~9",""));
+        if(dan<2 || dan>9 || isNaN(dan)==true){
+            var check = true;
+        }
+
+        while(check){
+            alert("다시 입력하세요");
+            var dan = parseInt(prompt("2~9", ""));
+
+            if(dan>=2 && dan<=9 && isNaN(dan)==false){
+                check = false;
+            }
+        }
+
+        function gugudan(dan){
+            document.write("<h1>"+dan+"단 </h1>");
+            for(var j = 1; j <= 9; j++){
+                document.write(dan+"X"+j+"="+dan*j,"<br/>");
+            }
+        }
+        gugudan(dan);
+    </script>
+</body>
+</html>

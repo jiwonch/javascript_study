@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to create h1 element with some text.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction(){
+            const h = document.createElement("h1");
+            const t = document.createTextNode("Hello world");
+            h.appendChild(t);
+            document.body.appendChild(h);
+        }
+    </script>
+</body>
+</html>

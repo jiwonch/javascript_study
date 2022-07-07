@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Common_drink(category, volume, pricePerGlass){
+            this.category = category;
+            this.volume = Number(volume);
+            this.pricePerGlass = Number(pricePerGlass);
+            this.fullPrice = function(){
+                document.write(this.category+"&nbsp;" + this.volume + "잔은 " + this.volume*this.pricePerGlass + "원 입니다.","<br>");
+            }
+        }
+
+        var customerSelect = new Common_drink("맥주", 5, 4000);
+        customerSelect.fullPrice();
+    </script>
+</body>
+</html>

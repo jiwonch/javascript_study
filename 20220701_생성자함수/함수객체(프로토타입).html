@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ScoreMin1(){
+            this.in_sccore = 0;
+            this.out_min_score = 100;
+
+            this.find_score = function(ele){
+                this.in_score = ele;
+                for(var i = 0; i < this.in_score.length; i++){
+                    if(this.out_min_score> this.in_score[i])
+                    this.out_min_score = this.in_score[i];
+                }
+                return this.out_min_score;
+            }
+        };
+
+        var o2 = new ScoreMin1();
+        document.write('min='+o2.find_score([30,50,60,23]));
+    </script>
+</body>
+</html>

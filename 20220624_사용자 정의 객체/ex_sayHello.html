@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 생성자함수
+        function Person(name, gender){
+            this.name=name;
+            this.gender=gender;
+            this.sayHello = function(){
+                return 'Hi! My name is '+this.name;
+            };
+        }
+
+        // 인스턴스 생성
+        var Person1 = new Person('Lee','female');
+        var Person2 = new Person('Choi','female');
+        document.write(Person1.name +'<br>'); //메소드가 아니라 속성이니까 () 쓰면 안됨
+        document.write(Person2.name +'<br>');
+        document.write(Person1.sayHello()); // 메소드이니까 ()써줘야 함
+    </script>
+</body>
+
+</html>

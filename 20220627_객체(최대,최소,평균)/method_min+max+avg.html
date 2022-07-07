@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Score = {
+            in_score: 0,
+            out_max_score: 0,
+            out_min_score: 100,
+            out_avg_score: 0,
+
+            find_scoreMax: function (ele) {
+                this.in_score = ele;
+                for (var i = 0; i < this.in_score.length; i++) {
+                    if (this.out_max_score < this.in_score[i])
+                        this.out_max_score = this.in_score[i];
+                }
+                return this.out_max_score;
+            },
+
+            find_scoreMin: function (ele) {
+                this.in_score = ele;
+                for (var i = 0; i < this.in_score.length; i++) {
+                    if (this.out_min_score > this.in_score[i])
+                        this.out_min_score = this.in_score[i];
+                }
+                return this.out_min_score;
+            },
+
+            find_scoreAvg: function (ele) {
+                this.in_score = ele;
+                var sum = 0;
+                for (var i = 0; i < this.in_score.length; i++) {
+                    sum += this.in_score[i];
+                }
+                this.out_avg_score = sum / this.in_score.length;
+                return this.out_avg_score;
+            }
+        };
+
+        var o1 = Score.find_scoreMax([10, 20, 30, 40, 50]);
+        document.write("최대값= " + o1 +'</br>');
+
+        var o2 = Score.find_scoreMin([10, 20, 30, 40, 50]);
+        document.write("최소값= " + o2+'</br>');
+
+        var o3 = Score.find_scoreAvg([10, 20, 30, 40, 50]);
+        document.write("평균값= " + o3);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function gugudan(dan){
+            document.write("<h1>"+dan+"단 </h1>");
+            for(var k = 1; k <= 9; k++){
+                document.write(dan+"X"+k+"="+dan*k, "<br/>");
+            }
+        };
+
+        gugudan(5);
+
+        var gugudan2 = (dan2)=>{
+            document.write("<h1>"+dan2+"단 </h1>");
+            for(var k = 1; k <= 9; k++){
+                document.write(dan2+"X"+k+"="+dan2*k, "<br/>");
+            }
+        }
+
+        gugudan2(3);
+        
+    </script>
+</body>
+</html>

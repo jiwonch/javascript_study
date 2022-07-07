@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var ScoreMin = {
+            in_score: 0,
+            out_min_score: 100,
+
+            find_score: function (ele) {
+                this.in_score = ele;
+                for (var i = 0; i < this.in_score.length; i++) {
+                    if (this.out_min_score > this.in_score[i])
+                        this.out_min_score = this.in_score[i];
+                }
+                return this.out_min_score;
+            }
+        };
+
+        var ScoreMax = {
+            in_score: 0,
+            out_max_score: 0,
+
+            find_score: function (ele) {
+                this.in_score = ele;
+                for (var i = 0; i < this.in_score.length; i++) {
+                    if (this.out_max_score < this.in_score[i])
+                        this.out_max_score = this.in_score[i];
+                }
+                return this.out_max_score;
+            }
+        };
+
+        var ScoreAvg = {
+            in_score: 0,
+            out_avg_score: 0,
+
+            find_score: function (ele) {
+                this.in_score = ele;
+                var sum = 0;
+                for (var i = 0; i < this.in_score.length; i++) {
+                    sum += this.in_score[i];
+                }
+                this.out_avg_score = sum / this.in_score.length;
+                return this.out_avg_score;
+            }
+        };
+
+        var o2 = ScoreMin.find_score([10, 30, 40]);
+        document.write('min=' + o2 + '</br>');
+
+        var o3 = ScoreMax.find_score([10, 30, 40]);
+        document.write('max=' + o3 + '</br>');
+
+        var o4 = ScoreAvg.find_score([10, 23, 40]);
+        document.write('avg=' + o4)
+    </script>
+</body>
+
+</html>
+

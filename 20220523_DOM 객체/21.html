@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: "맑은 고딕";
+        }
+
+        button{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/apple.jpg" alt="apple">
+    <button id="btn1">이미지 바뀌기1</button>
+
+    <script>
+        document.getElementById('btn1').onclick = function(){
+            document.getElementsByTagName('img')[0].src = "img/tomato.jpg";
+        }
+    </script>
+</body>
+</html>

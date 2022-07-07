@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>2</title>
+    </head>
+
+    <body>
+        <img src="img/banner_1.jpg" alt="banner_1">
+
+        <script>
+            var ct =0;
+            var imgs = new Array("img/banner_1.jpg", "img/banner_2.jpg", "img/banner_3.jpg");
+            setTimeout(progress, 1000);
+            function progress(){
+                if(ct<3){
+                    document.images[0].src=imgs[ct];
+                    ct++;
+                    setTimeout(progress, 1000);
+                    if(ct>=3){
+                        ct=0;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

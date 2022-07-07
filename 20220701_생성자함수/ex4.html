@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Common_MeatShop(category, volume, pricePerKg){
+            this.category=category;
+            this.volume=Number(volume);
+            this.pricePerKg = Number(pricePerKg);
+            this.fullPrice = function(){
+                document.write(this.category+" " + this.volume + 'kg은 ' + this.volume*this.pricePerKg + '원 입니다.');
+            }
+        }
+
+        var customerSelect = new Common_MeatShop("사과", 2, 20000);
+        customerSelect.fullPrice();
+    </script>
+</body>
+</html>

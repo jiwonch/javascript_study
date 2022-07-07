@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            font-family: "맑은 고딕";
+            color: #666;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .numm {
+            width: 200px;
+            height: 50px;
+            border: 1px solid #666;
+            padding: 20px 0 0 20px;
+            margin: 20px;
+        }
+
+        .sum {
+            width: 200px;
+            height: 50px;
+            border: 1px solid #666;
+            padding: 20px 0 0 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>숫자를 받아서 짝수 값의 합을 구하시오.</h1>
+
+    <script>
+        // 짝수의 합 구하기
+        function evenSum(ele){
+            var sum = 0;
+
+            for( var i = 0; i<ele.length; i++){
+                if(ele[i] %2 == 0){
+                    sum += ele[i];
+                } else{
+                    continue;
+                } 
+            } return(sum);
+        }
+
+        // 짝수의 합 출력
+        function hhh(ele){
+            var sum_Value = evenSum(ele);
+
+            document.write('<div class="sum">' +'짝수의 합 = '+sum_Value+'</div>')
+        }
+
+        // 입력받기
+        var arr = [];
+        var number1 = parseInt(prompt('입력할 숫자는 몇개입니까', '1'));
+
+        if(isNaN(number1)==true || number1<0){
+            var cc = true;
+        }
+
+        while(cc){
+            alert("양의 정수를 입력하세요", "");
+            var number1 = parseInt(prompt('입력할 숫자는 몇개입니까', '1'));
+
+            if( isNaN(number1)==false && number1>=0){
+                cc = false;
+            }
+        }
+        
+        var input = function(){
+            var even = Number(prompt('숫자를 입력하시오', '2'));
+            // 받은 값이 정수가 아닌 문자열일 경우 예외처리
+            if( isNaN(even)==true || even<0){
+                var check = true;
+            }
+            
+            while(check){
+                alert("양의 정수를 입력하세요", "");
+                var even = Number(prompt('숫자를 입력하시오', '2'));
+
+                if( isNaN(even)==false && even>=0){
+                    check = false;
+                }
+            }
+            arr.push(even);
+        }
+
+        //입력 받는거 반복
+        i=0;
+        while ( i<number1){
+            input();
+            i++;
+        }
+
+        // 받은 값 출력
+        document.write('<div class = "numm">'+'받은 숫자 = '+arr+'</div>');
+        hhh(arr);
+    </script>
+</body>
+
+</html>

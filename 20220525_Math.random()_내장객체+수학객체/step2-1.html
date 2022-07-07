@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var score=[];
+        var numbering = parseInt(prompt('입력할 학생 수를 적으시오', '0'));
+
+        var input = function(){
+            var name = prompt('입력할 학생의 이름을 적으시오', '홍길동');
+            var korean = Number(prompt('국어 점수를 입력하시오.','100'));
+            var english = Number(prompt('영어 점수를 입력하시오.','100'));
+            var math = Number(prompt('수학 점수를 입력하시오.','100'));
+            var sum = korean+english+math;
+            var avg = Math.round(sum/3);
+
+            score.push(name);
+            score.push(korean);
+            score.push(english);
+            score.push(math);
+
+            document.write('<br> 이름 : '+name+'<br><br>');
+            document.write('국어 점수 : '+korean+'<br>');
+            document.write('영어 점수 : '+english+'<br>');
+            document.write('수학 점수 : '+math+'<br>');
+            document.write('점수 합계 : '+sum+'<br>');
+            document.write('평균 : '+avg+'<br>');
+        }
+
+        var i = 0;
+        while(i<numbering){
+            input();
+            i++;
+        }
+    </script>
+</body>
+</html>

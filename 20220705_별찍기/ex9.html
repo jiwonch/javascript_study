@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: "굴림체";
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var loopCount = parseInt(prompt('홀수'));
+        var baseLine = parseInt(loopCount/2);
+        var sideEffect = 0;
+        var decSideEffect = 0;
+        for( var i = 0; loopCount>i; i++){
+            for(var j = 0; loopCount>j; j++){
+                if(
+                    i==baseLine ||
+                    j==baseLine ||
+                    j>=baseLine-sideEffect && j < baseLine ||
+                    j<=baseLine+sideEffect && j > baseLine
+                ) {
+                    document.write('*');
+                } else{
+                    document.write('-');
+                }
+            }
+            if(sideEffect >= baseLine){
+                sideEffect--;
+                decSideEffect=1;
+            } else{
+                if(decSideEffect==1){
+                    sideEffect--;
+                } else{
+                    sideEffect++;
+                }
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+</html>

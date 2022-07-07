@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #c {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li id="a">딸기</li>
+        <li id="b">바나나</li>
+        <li id="c">사과</li>
+    </ul>
+
+    <script>
+        this.onmouseover = function (e) {
+            if (e.target.id == "a") { a.style.backgroundColor = "red", a.style.cursor = "pointer" }
+            if (e.target.id == "b") { b.style.backgroundColor = "green"; }
+            if (e.target.id == "c") { c.style.backgroundColor = "blue"; }
+        }
+
+        this.onmouseout = function (e) {
+            if (e.target.id == "a") { a.style.backgroundColor = "white"; }
+            if (e.target.id == "b") { b.style.backgroundColor = "white"; }
+            if (e.target.id == "c") { c.style.backgroundColor = "white"; }
+        }
+    </script>
+</body>
+
+</html>

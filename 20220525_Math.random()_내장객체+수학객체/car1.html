@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>전기 자동차 가격</h1>
+
+    <input type="checkbox" name="opt1" id="opt1" value="250000" onclick="car();">
+    <span>인조가죽세트 / 250000</span>
+    <br>
+
+    <input type="checkbox" name="opt2" id="opt2" value="250000" onclick="car();">
+    <span>내비게이션 / 250000</span>
+    <br>
+
+    <input type="checkbox" name="opt3" id="opt3" value="440000" onclick="car();">
+    <span>선루프 / 440000</span>
+
+    <h3>차량 견적</h3>
+    <input type="text" name="total" id="total" value="0">
+
+    <script>
+        function car(){
+            var basic_car=Number(document.getElementById("total").defaultValue);
+            for(var i =1; i<=3; i++){
+                var eleObj=document.getElementById("opt"+i);
+                if(eleObj.checked) basic_car+=Number(eleObj.value);
+            }
+
+        document.getElementById("total").value=basic_car;
+        }
+    </script>
+</body>
+</html>

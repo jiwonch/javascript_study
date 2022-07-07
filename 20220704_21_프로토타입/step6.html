@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Common_bread(category, volume, perPrice){
+            this.category = category;
+            this.volume = Number(volume);
+            this.perPrice = Number(perPrice);
+        }
+
+        Common_bread.prototype.fullPrice = function(){
+            document.write(this.category+'빵'+this.volume+'개는'+this.volume*this.perPrice+'원 입니다.');
+        }
+
+        var customerSelect = new Common_bread('소보루', 10, 1000);
+        customerSelect.fullPrice();
+    </script>
+</body>
+</html>

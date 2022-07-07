@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = prompt("단수를 입력하세요", "2");
+        var check = parseInt((num*10)%10);
+        var i=1;
+
+        if(check==0){
+            if(num>0 && num<=9){
+                while(i<=num){
+                    document.write("<h1>"+num+"단</h1>");
+                    var j =2;
+                    while(j<10){
+                        var k = num*j;
+                        document.write(num+"x"+j+"="+k+"<br>");
+                        j++;
+                    } break;
+                    i++;
+                }
+            } else{
+                alert("1~9사이를 입력하세요");
+                location.reload();
+            } 
+        } else{
+            alert("정수를 입력하세요.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

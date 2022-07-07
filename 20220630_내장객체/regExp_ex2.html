@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    사이트에 회원 가입할 때 작성하는 이름과 휴대폰 번호, 이메일의 질의 응답 창으로 가입자에게
+    입력받고, 정규 표현 객체를 사용하여 입력한 내용이 정규 표현 규칙에 어긋날 때는 경고창을 띄웁니다.
+    그리고 다시 작성하도록 질의 응답 창을 띄웁니다.
+    <script>
+        var userName = prompt("당신의 이름은?");
+
+        reg1=/^[가-힣]{2,5}$/;
+
+        while(true){
+            if(reg1.test(userName)) break;
+            alert("이름 입력 형식이 잘못되었습니다!");
+            userName=prompt("당신의 이름은?");
+        }
+
+        var userCell = prompt("당신의 핸드폰 번호는?");
+        reg2=/^(010|016|011)\d{3,4}\d{4}$/;
+
+        while(true){
+            if(reg2.test(userCell)) break;
+            alert("핸드폰 입력 형식이 잘못되었습니다!");
+            userCell = prompt("당신의 핸드폰 번호는?");
+        }
+
+        var userEmail = prompt("당신의 이메일은?");
+        reg3=/^\w{5,12}@[a-z]{2,10}[\.][a-z]{2,3}[\.]?[a-z]{0,2}$/;
+
+        while(true){
+            if(reg3.test(userEmail)) break;
+            alert("이메일 입력 형식이 잘못되었습니다!");
+            userEmail = prompt("당신의 이메일은?");
+        }
+
+        document.write(userName, "<br>");
+        document.write(userCell, "<br>");
+        document.write(userEmail, "<br>");
+    </script>
+</body>
+</html>

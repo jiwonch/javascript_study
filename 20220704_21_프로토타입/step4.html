@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Common_selectShop(category, volume, kgPerPrice) {
+            this.categroy = category;
+            this.volume = Number(volume);
+            this.kgPerPrice = Number(kgPerPrice);
+        }
+
+        Common_selectShop.prototype.fullPrice = function(){
+            document.write(this.categroy + '상의' + this.volume + '장은 ' + this.volume * this.kgPerPrice + '원 입니다.');
+        }
+
+        var customerSelect = new Common_selectShop('티셔츠', 3, 25000);
+        customerSelect.fullPrice();
+    </script>
+</body>
+
+</html>

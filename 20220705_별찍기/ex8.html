@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: "굴림체";
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var count = parseInt(prompt("홀수입력"));
+        var baseLine = (count-1) / 2;
+        document.write('.');
+        for(var i = 0; i < count; i++){
+            document.write(i);
+        }
+        document.write('<br>');
+        for(var i = 0; i < count; i++){
+            document.write(i);
+            for(j = 0; j < count; j++){
+                if(j == baseLine || i == baseLine ||
+                (j-i <= baseLine && i < baseLine && j > baseLine)||
+                (i+j >= baseLine && i < baseLine && j < baseLine)||
+                (i-j <= baseLine && i > baseLine && j < baseLine)||
+                (i+j <= baseLine*3 && i > baseLine && j > baseLine)
+                ) {
+                    document.write('*');
+                } else{
+                    document.write('-');
+                }
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+</html>

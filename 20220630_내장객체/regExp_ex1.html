@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2개의 정규 표현 객체를 생성하였는데, 이때 옵션을 설정하지 않는 것은 대소문자를 가리고,
+    설정에 "i"를 입력한 것은 대 소문자를 가리지 않는다. 그리고 정규 표현 객체의 test()메서드를
+    사용해 메서드에 입력한 데이터가 정규 표현 형식을 잘 준수했는지 결과를 출력함 -->
+    <script>
+
+        var str = "Html Css Jquery ";
+        var reg1 = /css/; //var reg1 = new RegExp("css")
+
+        // 변수 str 데이터가 reg1에 정규표현 형식을 잘지켰으면 true를 반환하고 안지켰을 경우엔 false를 반환
+        var result_1 = reg1.test(str);
+        document.write(result_1, "<br>");
+
+        // 옵션에 "i"를 입력하면 영문 대소문자를 구분하지 않는다
+        var reg2 = /css/i; //var reg2 = new RegExp("css", "i")
+        var result_2 = reg2.test(str);
+        document.write(result_2, "<br>")
+
+    </script>
+</body>
+
+<!-- test() - 지정한 규칙에 맞는 단어가 있으면 true 값을 반환
+exex() - 지정된 규칙에 맞는 단어가 있으면 해당 단어를 반환
+이 메서드를 사용하면 지정한 특정 문자 데이터가 정규 표현 규칙에 맞게 작성되었는지 알 수 있다.
+다시 말해, 지정한 정규 표현 규칙대로 코드가 작성되었는 알 수있다. -->
+
+</html>

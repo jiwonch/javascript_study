@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: '맑은 고딕';
+        }
+
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn0">click</button>
+
+    <h1>Math 수학 객체</h1>
+    <button id="btn1">click</button>
+    <div id="box"></div>
+
+    <button onclick="chc()">click</button>
+    <h1 id="a">text color 색상바꾸기</h1>
+
+    <button id="btn2">click</button>
+    <img src="img/banana.jpg" alt="banana" id="b">
+
+    <button onclick="icf()">click</button>
+    <img src="img/banana.jpg" alt="banana" id="c">
+
+    <script>
+        var bgcolor = ["lightcoral","lightblue", "lightcyan", "lightpink", "lightgreen","lightsalmon"];
+        
+        btn0.onclick = function(){
+            var bg = Math.floor(Math.random() * bgcolor.length);
+            document.body.style.backgroundColor = bgcolor[bg];
+        }
+
+        var color = ["blue", "yellowgreen", "purple","magenta", "gold", "steelblue"]
+
+        btn1.onclick = function() {
+            var c = Math.round(Math.random() * color.length);
+            document.getElementById('box').style.backgroundColor = color[c];
+        }
+
+        function chc() {
+            var ct = Math.round(Math.random() * color.length);
+            document.getElementById('a').style.color = color[ct];
+        }
+
+        var image = ["img/apple.jpg", "img/banana.jpg", "img/orange.jpg", "img/tomato.jpg", "img/watermelon.jpg"];
+
+        btn2.onclick = function() {
+            var i = Math.floor(Math.random() * image.length);
+            document.getElementById('b').src = image[i];
+        }
+
+        
+        var j =0;
+        function icf() {
+            c.src = image[j];
+            j++;
+
+            if(j>=image.length){
+                j=0;
+            }
+        }
+    </script>
+</body>
+</html>

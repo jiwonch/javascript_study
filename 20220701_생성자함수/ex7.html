@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Cosmetics(aritaum, membership, point){
+            this.aritaum = aritaum;
+            this.membership = membership;
+            this.point = Number(point);
+            this.full = function(){
+                document.write(this.aritaum +'멤버쉽 ' + this.membership + '포인트는 ' +this.point+ '원 입니다.' + "<br/>");
+            }
+        }
+
+        var membershipPoint = new Cosmetics('아리따움', '적립', 9811);
+        membershipPoint.full();
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: "맑은 고딕";
+        }
+
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+        #boxes{
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        
+        #boxes img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    오늘의?
+    <button id="c">click</button>
+    <div id="box"> 메뉴는?</div>
+    <div id="boxes">
+        <img src="img/apple.jpg" alt="imgs" id="img_s">
+    </div>
+
+    <script>
+        document.getElementById('c').onclick = function(){
+            const menu =["짜장면", "돈가스", "된장국", "김치찌개", "회덮밥"];
+            const bg=["grren", "blue", "rosybrown", "red"];
+            const imgs=["img/apple.jpg", "img/banana.jpg", "img/orange.jpg", "img/tomato.jpg", "img/watermelon.jpg"];
+            
+            let menuNum = Math.floor(Math.random() * menu.length);
+            let bgNum = Math.floor(Math.random() *bg.length);
+            let imgsNum = Math.floor(Math.random() * imgs.length);
+
+            let result = menu[menuNum];
+            let c = bg[bgNum];
+            let i = imgs[imgsNum];
+
+            document.getElementById('box').innerHTML = result;
+            document.getElementById('box').style.backgroundColor = c;
+            document.getElementById('img_s').src = i;
+        }
+    </script>
+</body>
+</html>

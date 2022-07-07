@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function CakeShop(category, pcs, price){
+            this.category = category;
+            this.pcs = Number(pcs);
+            this.price = Number(price);
+            this.fullPrice = function(){
+                document.write(this.category + '케익' + this.pcs + '조각 가격은' + this.pcs*this.price + '원 입니다.');
+            }
+        }
+
+        var mySelect = new CakeShop('당근', 3, 6000);
+        mySelect.fullPrice();
+    </script>
+</body>
+</html>

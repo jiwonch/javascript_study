@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+</head>
+<body>
+    <script>
+        var dateObj = new Date(2022, 4, 26, 12, 47);
+        var dateday = new Date().getDay()
+
+        
+        var dateInfo ={
+            year: dateObj.getFullYear(),
+            month: dateObj.getMonth() +1,
+            date: dateObj.getDate(),
+            hours: dateObj.getHours(),
+            minutes: dateObj.getMinutes(),
+            days: Date().getDay(),
+            nowDate : dateObj.toUTCString()
+        }
+
+        switch(dateday){
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+
+
+        for(var i in dateInfo){
+            console.log(i + ':' + dateInfo[i]);
+        }
+    </script>
+</body>
+</html>

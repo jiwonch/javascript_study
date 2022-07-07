@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fruit = {
+            grade : "",
+            count: 0,
+            price: 0,
+
+            fullPrice : function(grade, count, price){
+                this.grade = grade;
+                this.count = Number(count);
+                this.price = Number(price);
+                document.write("과일의 종류는 " + this.grade+ "이고 갯수는 " + this.count+ "이며 가격은 " + (this.count*this.price)+"이다.");
+            }
+        }
+
+        fruit.fullPrice("banana",5, 3000);
+    </script>
+</body>
+</html>

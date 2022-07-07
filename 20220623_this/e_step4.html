@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="a">안녕</p>
+    <p id="b">호호호</p>
+
+    <script>
+        this.onclick = function(event) {
+            if (event.target.id == "a") { a.style.color = "red"; b.style.color = "black"; }
+            if (event.target.id == "b") { b.style.color = "red"; a.style.color = "black"; }
+        }
+    </script>
+</body>
+
+</html>

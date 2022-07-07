@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: "맑은 고딕";
+        }
+
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    오늘의
+    <button id="c">click</button>
+    <div id="box"> 메뉴는?</div>
+
+    <script>
+        document.getElementById('c').onclick = function(){
+            const menu = ["짜장면", "돈가스", "된장국", "김치찌개", "회덮밥"];
+            let menuNum = Math.floor(Math.random() * menu.length);
+            let result = menu[menuNum];
+            document.getElementById('box').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

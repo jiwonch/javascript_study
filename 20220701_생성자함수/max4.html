@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function NumberMax() {
+            this.in = 0;
+            this.out = 0;
+            this.find = function(ele){
+                this.in = ele;
+                for( var i = 0; i < this.in.length; i++){
+                    if(this.out < this.in[i]){
+                        this.out = this.in[i];
+                    }
+                }
+                return this.out;
+            }
+        }
+
+        var Max = new NumberMax();
+        document.write(Max.find([20,40,60]));
+    </script>
+</body>
+</html>

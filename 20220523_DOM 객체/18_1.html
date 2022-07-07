@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: "맑은 고딕";
+        }
+
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+        #box img{
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    오늘의
+    <button id="c">click</button>
+    <div id="box"> 메뉴는?
+        <img src="img/apple.jpg" alt="apple" name="menu">
+    </div>
+
+    <script>
+        document.getElementById('c').onclick = function(){
+            var imgs = new Array("img/apple.jpg", "img/banana.jpg", "img/orange.jpg", "img/tomato.jpg", "img/watermelon.jpg");
+            let menuNum = Math.floor(Math.random() * imgs.length);
+            let result = menu[menuNum];
+            document.getElementById('box')= result;
+            document.getElementsByTagName('img').style.display = "block";
+        }
+    </script>
+</body>
+</html>

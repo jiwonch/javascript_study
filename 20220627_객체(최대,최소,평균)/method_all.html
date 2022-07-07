@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Score = {
+            in_score : 0,
+            out_max_score: 0,
+            out_min_score: 0,
+            out_avg_score: 0,
+
+            save_score: function(score){
+                this.in_score = score;
+            },
+
+            find_scoreMax : function(){
+
+                for(var i =0; i<this.in_score.length; i++){
+                    if(this.out_max_score<this.in_score[i])
+                    this.out_max_score=this.in_score[i];
+                }
+
+                return this.out_max_score;
+            },
+
+            find_scoreMin : function(){
+                this.out_min_score = this.in_score[0];
+                for(var i = 0; i < this.in_score.length; i++){
+                    if(this.out_min_score>this.in_score[i])
+                    this.out_min_score=this.in_score[i];
+                }
+
+                return this.out_min_score;
+            },
+
+            find_scoreAvg: function(){
+                var sum = 0;
+                for(var i = 0; i < this.in_score.length; i++){
+                    sum += this.in_score[i];
+                }
+
+                this.out_avg_score = sum / this.in_score.length;
+                return this.out_avg_score;
+            },
+
+            function_result : function(score){
+                this.save_score(score);
+                this.find_scoreMin();
+                this.find_scoreMax();
+                this.find_scoreAvg();
+
+                document.write("min = " + this.out_min_score+"<br>");
+                document.write("max = " + this.out_max_score+"<br>");
+                document.write("avg = " + this.out_avg_score+"<br>");
+            }
+        };
+
+        var input = [10, 99, 33, 70, 20, 30, 50, 66];
+        var s1 = Score.function_result(input);
+    </script>
+</body>
+</html>

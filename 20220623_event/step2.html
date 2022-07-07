@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="textc">과일</h1>
+    <input type="radio" name="a" id="btn1" checked><span>토마토</span>
+    <input type="radio" name="a" id="btn2"><span>바나나</span>
+    <input type="radio" name="a" id="btn3"><span>수박</span>
+
+    <script>
+        this.onclick=function(event){
+            if(btn1.checked==true){textc.style.backgroundColor="tomato";}
+            if(btn2.checked==true){textc.style.backgroundColor="gold";}
+            if(btn3.checked==true){textc.style.backgroundColor="green";}
+        }
+    </script>
+</body>
+</html>

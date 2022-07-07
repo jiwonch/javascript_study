@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //최대값, 최소값, 평균값을 다 불러오는 함수
+
+        var arr = [["A", [11, 55, 60]], ["B", [22, 33, 44]]];
+
+        //함수로 최대값
+
+        function max(ele) {
+            var max_list = [0, 0, 0];
+            for (var i = 0; i < ele.length; i++) {
+                for (var j = 0; j < ele[i][1].length; j++) {
+                    if (max_list[j] < ele[i][1][j]) {
+                        max_list[j] = ele[i][1][j];
+                    }
+                }
+            }
+            return (max_list);
+        }
+
+        //최소값
+
+        function min(ele) {
+            var min_list = [100, 100, 100];
+            for (var i = 0; i < ele.length; i++) {
+                for (var j = 0; j < ele[i][1].length; j++) {
+                    if (min_list[j] > ele[i][1][j]) {
+                        min_list[j] = ele[i][1][j];
+                    }
+                }
+            }
+            return (min_list);
+        }
+
+        //평균값
+
+        function avg(ele) {
+            var avg_list = [];
+            for (var i = 0; i < ele[0][1].length; i++) {
+                var sum = 0;
+                for (var j = 0; j < ele.length; j++) {
+                    sum += ele[j][1][i];
+                }
+                avg_list[i] = sum / ele.length;
+            }
+            return (avg_list);
+        }
+
+
+        //다 불러오는 함수
+
+        function scores(ele) {
+            var max_value = max(ele);
+            var min_value = min(ele);
+            var avg_value = avg(ele);
+            document.write(max_list); ("최대값=" + max_value + "<br>");
+            document.write(min_list); ("최소값=" + min_value + "<br>");
+            document.write(avg_list); ("평균값=" + avg_value);
+            return;
+        }
+        scores(arr);
+    </script>
+</body>
+
+</html>

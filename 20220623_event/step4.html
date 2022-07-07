@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/tomato.jpg" alt="tomato" id="chi">
+    <h1>과일</h1>
+    <input type="radio" name="a" checked><span>사과</span>
+    <input type="radio" name="a"><span>바나나</span>
+    <input type="radio" name="a"><span>오렌지</span>
+    <input type="radio" name="a"><span>토마토</span>
+    <input type="radio" name="a"><span>수박</span>
+
+    <script>
+        this.onclick=function(e){
+            if(document.getElementsByTagName('input')[0].checked==true){
+                chi.src="img/apple.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML="사과";
+            }
+
+            if(document.getElementsByTagName('input')[1].checked==true){
+                chi.src="img/banana.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML="바나나";
+            }
+
+            if(document.getElementsByTagName('input')[2].checked==true){
+                chi.src="img/orange.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML="오렌지";
+            }
+
+            if(document.getElementsByTagName('input')[3].checked==true){
+                chi.src="img/tomato.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML="토마토";
+            }
+
+            if(document.getElementsByTagName('input')[4].checked==true){
+                chi.src="img/watermelon.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML="수박";
+            }
+        }
+    </script>
+</body>
+</html>
